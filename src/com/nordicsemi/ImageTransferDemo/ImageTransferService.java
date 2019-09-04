@@ -367,7 +367,7 @@ public class ImageTransferService extends Service {
         mBluetoothGatt.setCharacteristicNotification(TxChar, true);
 
         BluetoothGattDescriptor descriptor = TxChar.getDescriptor(CCCD);
-        descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+        descriptor.setValue(BluetoothGattDescriptor.ENABLE_INDICATION_VALUE);
         mBluetoothGatt.writeDescriptor(descriptor);
 
 
